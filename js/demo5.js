@@ -8,7 +8,11 @@ function weather(ct){
         document.getElementById("hump").innerText = data.main.humidity;
         document.getElementById("wind").innerText = data.wind.speed;
         document.getElementById("icon").src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-
     });
 }
 weather("hanoi");
+
+function changeCity(e){
+    var city = e.value; // lấy được giá trị lựa chọn
+    weather(city);
+}
