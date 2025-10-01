@@ -21,3 +21,8 @@ function forecast(){
     });
 }
 forecast();
+
+// laays thông tin user tư localStorage
+var strUser = localStorage.getItem("user");// lấy chuỗi JSON từ localStorage với key là "user"
+var user = JSON.parse(strUser);// biến chuỗi JSON thành đối tượng user
+console.log(user);
